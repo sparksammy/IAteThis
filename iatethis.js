@@ -2,7 +2,7 @@ var d = new Date();
 var cals = document.getElementsByClassName("MuiTypography-root MuiCardHeader-title MuiTypography-h4 MuiTypography-colorInherit MuiTypography-gutterBottom MuiTypography-displayBlock").item(0).innerText;
 var title = document.getElementsByClassName("MuiTypography-root MuiTypography-h4").item(0).innerText.replace("How many calories in\n", "")
 var month = d.getMonth() + 1;
-var details = "You ate " + title + " with " + cals + " on " + month + "-" + d.getUTCDay() + "-" + d.getFullYear() + " at " + d.getHours() + ":" + d.getMinutes(); + ".\n"
+var details = "You ate " + title + " with " + cals + " on " + month + "-" + d.getDate() + "-" + d.getFullYear() + " at " + d.getHours() + ":" + d.getMinutes(); + ".\n"
 console.log(details); 
 var blob = new Blob([details],
                 { type: "text/plain;charset=utf-8" });
